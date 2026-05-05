@@ -156,7 +156,7 @@ IntArray::IntArray(const IntArray& other) {
     data=new int[capacity];
     for(int i=0;i<count;i++)
     data[i]=other.data[i];
-    Tracker::objectDestroyed();
+    Tracker::objectCreated();
 
 }
 

@@ -94,7 +94,7 @@ public:
 
 // TODO 1: Initialize Tracker's static member variable
 // Hint: int Tracker::objectCount = ???;
-int Tracker::objectCount =0;
+int Tracker::objectCount = 0;
 
 // ================================================================
 // TRACKER FUNCTION IMPLEMENTATIONS
@@ -133,9 +133,6 @@ IntArray::IntArray(int cap) {
     count=0;
     data= new int (capacity);
     Tracker::objectCreated;
-    
-    delete[] data;
-    Tracker::objectDestroyed;
     
 
 }

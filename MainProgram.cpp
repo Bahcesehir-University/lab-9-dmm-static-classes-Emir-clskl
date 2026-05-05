@@ -132,7 +132,7 @@ IntArray::IntArray(int cap) {
     capacity=cap;
     count=0;
     data= new int (capacity);
-    Tracker::objectCreated;
+    Tracker::objectCreated();
     
 
 }

@@ -94,7 +94,7 @@ public:
 
 // TODO 1: Initialize Tracker's static member variable
 // Hint: int Tracker::objectCount = ???;
-
+int Tracker::objectCount =0;
 
 // ================================================================
 // TRACKER FUNCTION IMPLEMENTATIONS
@@ -144,6 +144,8 @@ IntArray::IntArray(int cap) {
 IntArray::~IntArray() {
     // TODO 7: Free the dynamic array using 'delete[]'
     //         Notify Tracker that an object was destroyed
+    delete[] data;
+    Tracker::objectDestroyed();
 
 }
 
@@ -157,6 +159,7 @@ IntArray::IntArray(const IntArray& other) {
     data=new int[capacity];
     for(int i=0;i<count;i++)
     data[i]=other.data[i];
+    Tracker::objectDestroyed();
 
 }
 
